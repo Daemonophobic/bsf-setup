@@ -100,3 +100,8 @@ MongoDB: `mongodb://localhost:27017`
 
 ## Grafana Information
 We have used an embedded Grafana dashboard inside the front-end application for easy visualisations. To achieve this yourself you can setup Grafana or use an already delopyed Grafana instance and copy the embedded dashboard URL and add it as a environment variable.
+Grafana has a handy MongoDB datalink but it is only available for enterprise versions. We have created our own simple solution to this:
+- InfluxDB
+- [Recorder Script](https://github.com/Daemonophobic/phalerum-recorder)
+
+The recorder simply grabs all the data from the MongoDB and uploads it to the InfluxDB so that grafana can easily access all the data.
