@@ -1,6 +1,7 @@
 # BSF Setup
+![aware](https://github.com/Daemonophobic/bsf-setup/assets/24320290/312e452b-3be0-4414-9f9a-f2e2cd92d788)
 
-This project sets up a multi-container application using Docker Compose. It includes three services: an API, a front-end, and a MongoDB database. Below you'll find instructions for setting up and running the project.
+Breaching Simulation Framework sets up a multi-container application using Docker Compose. It includes three services: an API, a front-end, and a MongoDB database. Below, you'll find instructions for setting up and running the project.
 
 ## Prerequisites
 
