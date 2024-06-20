@@ -95,7 +95,8 @@ The Breaching Simulation Framework uses Docker Compose to set up a multi-contain
 After running docker-compose up -d, the services will be available on the following ports:
 
 API: `http://localhost:3000`
-
 Front-End: `http://localhost:9000`
-
 MongoDB: `mongodb://localhost:27017`
+
+## Grafana Information
+We have used an embedded Grafana dashboard inside the front-end application for easy visualisations. To achieve this yourself you can setup Grafana or use an already delopyed Grafana instance and copy the embedded dashboard URL and add it as a environment variable.
