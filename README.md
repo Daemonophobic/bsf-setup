@@ -1,13 +1,16 @@
-# BSF Setup
-![aware](https://github.com/Daemonophobic/bsf-setup/assets/24320290/312e452b-3be0-4414-9f9a-f2e2cd92d788)
+# Aware BSF Setup
+The Breaching Simulation Framework uses Docker Compose to set up a multi-container application. It includes three services: an API, a front-end, and a MongoDB database. Docker Compose will help set up with ease. You can follow the instructions to [Installation](#installation).
 
-Breaching Simulation Framework sets up a multi-container application using Docker Compose. It includes three services: an API, a front-end, and a MongoDB database. Below, you'll find instructions for setting up and running the project.
+## Table of Contents
+- [Services](#services)
+  - [API Services](#api-service)
+  - [Front-End Service](#front-end-service)
+  - [MongoDB Service](#mongodb-service)
+  - [Volumes](#volumes)
+- [Installation](#installation)
+- [Usage](#usage)
 
-## Prerequisites
-
-- Docker
-- Docker Compose
-
+## Services
 ### API Service
 
 - **Image**: `mvdijk01/phalerum-api:v1.0.0`
