@@ -89,6 +89,9 @@ This project sets up a multi-container application using Docker Compose. It incl
 
 ## Usage
 After running docker-compose up -d, the services will be available on the following ports:
+
 API: `http://localhost:3000`
-Front-End: http://localhost:9000
-MongoDB: mongodb://localhost:27017
+
+Front-End: `http://localhost:9000`
+
+MongoDB: `mongodb://localhost:27017`
