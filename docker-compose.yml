@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  api:
+    image: mvdijk01/phalerum-api:v1.0.0
+    container_name: phalerum-api
+    depends_on:
+      - "mongodb"
+    environment:
+      HOST: ${API_HOST}
+      PORT: ${API_PORT}
+      BASE_URL: ${API_BASE_URL}
+      URL: ${REFERER_URL}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_FROM: "${MAIL_FROM}"
+      MONGODB_CONNECTION_STRING: ${MONGODB_CONNECTION_STRING}
+      ENC_KEY: ${ENC_KEY}
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "3000:3000"
+    volumes:
+      - phalerum-api:/app
+  front-end:
+    image: mvdijk01/phalerum-front-end:v1.0.1
+    container_name: phalerum-front-end
+    depends_on:
+      - "api"
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+      VITE_GRAFANA_URL: ${VITE_GRAFANA_URL}
+      VITE_DEFAULT_DASHBOARD_GRAFANA_ID: ${VITE_DEFAULT_DASHBOARD_GRAFANA_ID}
+    ports:
+      - "9000:9000"
+    volumes:
+      - phalerum-front-end:/app
+  mongodb:
+    image: mongo:latest
+    container_name: phalerum-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+      MONGO_USER: ${MONGO_USER}
+      MONGO_USER_PASSWORD: ${MONGO_USER_PASSWORD}
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+
+volumes:
+  mongo-data:
+  phalerum-api:
+  phalerum-front-end:
