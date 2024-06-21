@@ -65,7 +65,7 @@ The Breaching Simulation Framework uses Docker Compose to set up a multi-contain
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/bsf-setup.git
+   git clone https://github.com/Daemonophobic/bsf-setup.git
    cd bsf-setup
 2. Create a .env file in the root directory and populate it with the necessary environment variables:
    
