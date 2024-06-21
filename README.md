@@ -1,5 +1,5 @@
 # Aware BSF Setup
-The Breaching Simulation Framework uses Docker Compose to set up a multi-container application. It includes three services: an API, a front-end, and a MongoDB database. Docker Compose will help set up with ease. You can follow the instructions to [Installation](#installation).
+A-ware BSF uses Docker Compose to set up a multi-container application. It includes three services: an API, a front-end, and a MongoDB database. Docker Compose will help set these applications up with ease. You can follow the instructions to [Installation](#installation).
 
 ## Table of Contents
 - [Services](#services)
